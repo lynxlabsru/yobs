@@ -11,7 +11,7 @@ interface StartupPreview {
 
 async function getStartups(): Promise<{ data: StartupPreview[]; meta: { total: number } }> {
     try {
-        const res = await fetch(`${process.env.API_URL || 'http://localhost:3001'}/api/gallery`, {
+        const res = await fetch(`${process.env.API_URL || 'https://yobs.onrender.com'}/api/gallery`, {
             cache: 'no-store',
         });
         return await res.json();

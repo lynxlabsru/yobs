@@ -17,7 +17,7 @@ interface Startup {
 
 async function getStartup(id: string): Promise<Startup | null> {
     try {
-        const res = await fetch(`${process.env.API_URL || 'http://localhost:3001'}/api/startup/${id}`, {
+        const res = await fetch(`${process.env.API_URL || 'https://yobs.onrender.com'}/api/startup/${id}`, {
             cache: 'no-store',
         });
         const data = await res.json();
