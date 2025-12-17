@@ -182,7 +182,7 @@ export class TelegramService implements OnModuleInit {
                 return ctx.reply('Нет привязанных стартапов. Используй /link <channel_id> <startup_id>');
             }
 
-            const list = startups.map(s =>
+            const list = startups.map((s: { name: string; id: string; telegramChannelId: string | null }) =>
                 `• ${s.name}\n  ID: ${s.id}\n  Канал: ${s.telegramChannelId}`
             ).join('\n\n');
 
