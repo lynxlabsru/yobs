@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Startup {
+  id          String   @id @default(cuid())
+  
+  // Core idea
+  name        String   // "SleepCoin"
+  tagline     String   // "Sleep more. Earn less."
+  description String   @db.Text
+  problem     String   @db.Text  // The "problem" it solves
+  solution    String   @db.Text  // The terrible solution
+  
+  // Generated assets
+  logoUrl     String?
+  heroUrl     String?
+  landingHtml String   @db.Text
+  
+  // Telegram integration
+  telegramChannelId   String?
+  telegramChannelName String?
+  
+  // Metadata
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  posts       TelegramPost[]
+}
+
+model TelegramPost {
+  id        String   @id @default(cuid())
+  startupId String
+  startup   Startup  @relation(fields: [startupId], references: [id])
+  content   String   @db.Text
+  postedAt  DateTime?
+  scheduled DateTime?
+  createdAt DateTime @default(now())
+}

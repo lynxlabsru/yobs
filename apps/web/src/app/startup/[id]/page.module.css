@@ -1,0 +1,130 @@
+.main {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.backLink,
+.galleryLink {
+    color: var(--muted);
+}
+
+.hero {
+    text-align: center;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.content h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.content p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.actions,
+.telegram {
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+}
+
+.actions h2,
+.telegram h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.connected {
+    padding: 16px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 12px;
+}
+
+.instructions {
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.instructions p {
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.instructions ol {
+    padding-left: 24px;
+    color: var(--fg);
+}
+
+.instructions li {
+    margin-bottom: 8px;
+}
+
+.instructions code {
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.footer {
+    padding: 48px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer p {
+    color: var(--muted);
+    margin-bottom: 16px;
+}

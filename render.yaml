@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: yobs-api
+    env: docker
+    dockerfilePath: ./apps/api/Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: AITUNNEL_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false

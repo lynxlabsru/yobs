@@ -1,0 +1,111 @@
+.main {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.header {
+    margin-bottom: 48px;
+}
+
+.backLink {
+    color: var(--muted);
+}
+
+.hero {
+    text-align: center;
+    padding: 48px 0;
+    margin-bottom: 48px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.empty {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.empty p {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 40px rgba(255, 107, 53, 0.15);
+}
+
+.cardContent {
+    padding: 24px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.logoPlaceholder {
+    width: 60px;
+    height: 60px;
+    background: var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.card time {
+    font-size: 12px;
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+.footer {
+    text-align: center;
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+}
